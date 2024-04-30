@@ -74,6 +74,8 @@ class ImageConstant {
   static String annualFees = '$imagePath/annual_fees.svg';
 
 
+  static String notifications = '$imagePath/notifications.svg';
+
 
 
 }

@@ -8,6 +8,8 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.5
   get: ^4.6.5 # for state management and context less stuff
+  intl: ^0.18.1
+  firebase_ui_firestore: ^1.6.3
 
   logger: ^1.4.0 # log events in clear way insted of (print)
 
