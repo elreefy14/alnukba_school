@@ -1,5 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:getx_skeleton/app/data/models/category_model.dart';
+import 'package:getx_skeleton/app/data/models/notification_model.dart';
 import 'package:getx_skeleton/app/data/remote/firestore_db.dart';
 import 'package:getx_skeleton/app/modules/splash/controllers/splash_controller.dart';
 import 'package:getx_skeleton/utils/constants.dart';
@@ -15,10 +18,24 @@ class HomeController extends GetxController {
   bool isLoading = true;
   @override
   void onInit() {
-    _splashController.getParameters().then((value) => getProducts());
-    selctedCategory = _splashController.categoriesList.first;
+    //_splashController.getParameters().then((value) => getProducts());
+    //selctedCategory = _splashController.categoriesList.first;
+    //putDummyDataToNotificationInFirestore();
     super.onInit();
   }
+    Future<void> putDummyDataToNotificationInFirestore() async {
+      CollectionReference notifications = FirebaseFirestore.instance.
+      collection('users').doc(FirebaseAuth.instance.currentUser!.uid).collection('notifications');
+    
+      var dummyNotification = NotificationModel(
+        id: '2',
+        title: 'Dummy Title',
+        body: 'Dummy Body',
+        timestamp: DateTime.now(),
+        isRead: false,
+      );    
+      await notifications.doc('2').set(dummyNotification.toMap());
+    }
   String? currentCommandId;
   void setCurrentCommandId(String? id) {
     currentCommandId = id;

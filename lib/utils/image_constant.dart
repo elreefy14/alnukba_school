@@ -52,5 +52,30 @@ class ImageConstant {
 
   static String userGrey = '$imagePath/user_grey.svg';
 
+  static String list = '$imagePath/list.svg';
+
+  static String notification = '$imagePath/notification.svg';
+  //سلوك الطالب
+  static String studentBehavior = '$imagePath/student_behavior.svg';
+//دروس اونلاين
+  static String onlineLessons = '$imagePath/online_lessons.svg';
+//الواجبات اليومية
+  static String dailyHomework = '$imagePath/daily_homework.svg';
+//جدول الامتحانات
+  static String examSchedule = '$imagePath/exam_schedule.svg';
+//جدول الدرو
+  static String lessonSchedule = '$imagePath/lesson_schedule.svg';
+  //الحضور والغياب
+  static String attendance = '$imagePath/attendance.svg'; 
+
+//الدرجات
+  static String grades = '$imagePath/grades.svg';
+//الاقساط السنوية
+  static String annualFees = '$imagePath/annual_fees.svg';
+
+
+  static String notifications = '$imagePath/notifications.svg';
+
+
 
 }
