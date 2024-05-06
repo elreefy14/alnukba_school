@@ -8,7 +8,7 @@ import 'package:getx_skeleton/app/modules/login/login_view.dart';
 import '../modules/base/bindings/base_binding.dart';
 import '../modules/base/views/base_view.dart';
 import '../modules/cart/bindings/cart_binding.dart';
-import '../modules/cart/views/cart_view.dart';
+import '../modules/cart/views/video_list_screen.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/notifications/bindings/notifications_binding.dart';
@@ -25,7 +25,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
- // static const INITIAL = Routes.HOME;
+  // static const INITIAL = Routes.HOME;
   static const INITIAL = Routes.SPLASH;
 
   static final routes = [
@@ -56,12 +56,12 @@ class AppPages {
     ),
     GetPage(
       name: Routes.CART,
-      page: () => CartView(),
+      page: () => VideoListScreen(),
       binding: CartBinding(),
     ),
     GetPage(
       name: Routes.NOTIFICATIONS,
-      page: () => const NotificationsView(),
+      page: () => NotificationsScreen(),
       binding: NotificationsBinding(),
     ),
     GetPage(

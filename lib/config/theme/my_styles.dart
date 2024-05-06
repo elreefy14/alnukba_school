@@ -20,7 +20,7 @@ class MyStyles {
       AppBarTheme(
         elevation: 0,
         titleTextStyle:
-        getTextTheme(isLightTheme: isLightTheme).bodyMedium!.copyWith(
+        getTextTheme(isLightTheme: isLightTheme|| !isLightTheme).bodyMedium!.copyWith(
           color: Colors.white,
           fontSize: MyFonts.appBarTittleSize,
         ),
@@ -30,15 +30,19 @@ class MyStyles {
                 : DarkThemeColors.appBarIconsColor),
         backgroundColor: isLightTheme
             ? LightThemeColors.appBarColor
-            : DarkThemeColors.appbarColor,
+            : LightThemeColors.appBarColor,
       );
 
   ///text theme
   static TextTheme getTextTheme({required bool isLightTheme}) => TextTheme(
        
-    labelLarge: MyFonts.buttonTextStyle.copyWith(
-      fontSize: MyFonts.buttonTextSize,
-    ),
+    labelLarge:
+     MyFonts.appBarTextStyle.copyWith(
+          color: 
+          isLightTheme
+              ? Colors.white
+              : Colors.white,
+        ),
     bodyLarge: (MyFonts.bodyTextStyle).copyWith(
       fontWeight: FontWeight.bold,
       fontSize: MyFonts.bodyLargeSize,
@@ -64,7 +68,8 @@ class MyStyles {
               ? LightThemeColors.bodyTextColor
               : DarkThemeColors.bodyTextColor,
         ),
-    displayMedium: (MyFonts.displayTextStyle).copyWith(
+    displayMedium: (MyFonts.displayTextStyle).
+    copyWith(
         fontSize: MyFonts.displayMediumSize,
         fontWeight: FontWeight.bold,
         color: isLightTheme

@@ -29,8 +29,12 @@ class FcmHelper {
       // initialize fcm and firebase core
       await Firebase.initializeApp(
         // TODO: uncomment this line if you connected to firebase via cli
-          options: DefaultFirebaseOptions.currentPlatform,
+          options: 
+          DefaultFirebaseOptions.currentPlatform,
+
       );
+       FirebaseFirestore.instance.settings =
+          const Settings(persistenceEnabled: true);
 
       // initialize firebase
       messaging = FirebaseMessaging.instance;

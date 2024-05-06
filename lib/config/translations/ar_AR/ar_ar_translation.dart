@@ -75,4 +75,6 @@ const Map<String, String> arAR = {
   //
   Strings.management: 'الإدارة',
   Strings.admin: 'المدير',
+  // static const String mainScreenTitle = 'الصفحة الرئيسية';
+  Strings.mainScreenTitle: 'الصفحة الرئيسية',
 };

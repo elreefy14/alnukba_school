@@ -82,4 +82,7 @@ const Map<String, String> enUs = {
 
   Strings.management: 'Management',
   Strings.admin: 'Admin',
+  // static const String mainScreenTitle = 'الصفحة الرئيسية';
+
+  Strings.mainScreenTitle: 'Main Screen',
 };

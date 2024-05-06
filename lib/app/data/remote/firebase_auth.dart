@@ -124,6 +124,8 @@ I/flutter (25223): │ ! }
         role: value.data()!['role'],
         address: value.data()!['address'],
         fullName: value.data()!['fullName'],
+        // /unreadNotifications
+         unreadNotifications: value.data()!['unreadNotifications'],
       );
       return userData;
     }).catchError((error) {

@@ -105,5 +105,43 @@ class Strings {
   static const String admin = 'Admin';
 
   static const String latestNotifications = 'أحدث الاشعارات';
-  
+//mainScreenTitle
+ static const String mainScreenTitle = 'الصفحة الرئيسية';
+  //Strings.myProfile.tr,
+  static const String myProfile = 'الملف الشخصي';
+  //Strings.myOrders.tr,
+  static const String myOrders = 'طلباتي';
+  //Strings.myCart.tr,
+  static const String myCart = 'سلتي';
+  //Strings.myNotifications.tr,
+  static const String myNotifications = 'اشعاراتي';
+  //Strings.myPayments.tr,
+  static const String myPayments = 'مدفوعاتي';
+  //Strings.myProducts.tr,
+  static const String myProducts = 'منتجاتي';
+  //Strings.myAddresses.tr,
+  static const String myAddresses = 'عناويني';
+  //Strings.mySettings.tr,
+  static const String mySettings = 'اعداداتي';
+  //Strings.myContactUs.tr,
+  static const String myContactUs = 'تواصل معنا';
+  //Strings.myLogout.tr,
+  static const String myLogout = 'تسجيل الخروج';
+  //Strings.myLogin.tr,
+  static const String myLogin = 'تسجيل الدخول';
+  //Strings.myRegister.tr,
+  static const String myRegister = 'تسجيل جديد';
+  //Strings.myForgotPassword.tr,
+  static const String myForgotPassword = 'نسيت كلمة المرور';
+  //Strings.myResetPassword.tr,
+  static const String myResetPassword = 'اعادة تعيين كلمة المرور';
+  //Strings.mySendResetLink.tr,
+  static const String mySendResetLink = 'ارسال رابط اعادة تعيين كلمة المرور';
+  //Strings.myEmail.tr,
+  static const String myEmail = 'البريد الالكتروني';
+  //Strings.myPassword.tr,
+  static const String myPassword = 'كلمة المرور';
+  //Strings.myAlreadyHaveAnAccount.tr,
+  static const String myAlreadyHaveAnAccount = 'هل لديك حساب بالفعل؟';
+  //Strings.myDontHaveAnAccount.tr,
 }

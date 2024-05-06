@@ -20,10 +20,10 @@ class SplashController extends GetxController {
   final FireStorDB _fireStorDB = FireStorDB();
   User? user;
   List<CategoryModel> categoriesList = [CategoryModel(id: "0", name: "All")];
-  List<UnitModel> unitsList = [];
-  List<TypeModel> typesList = [];
-  LoginController loginController = Get.put(LoginController(), permanent: true);
-
+  // List<UnitModel> unitsList = [];
+  // List<TypeModel> typesList = [];
+  LoginController loginController = Get.put(LoginController(), permanent: false);
+  UserModel? appUser;
   @override
   void onReady() async {
     super.onReady();
@@ -35,17 +35,18 @@ class SplashController extends GetxController {
 //   "eXTTT75cTIWlKuRW87LdGU:APA91bHRBzQ22gWq7arPIYC_ovKBgl8rDYmlygqXGSH0GDxN5CJTPYSlMU9vyiv25kZD3vFTw821s8CtFqyXEjoYdL8PFzTMftBC91trkYAo3kKfuFiUktQc-sEx2KSUgTsVWBsBLDsO",
 //   payload: 'settings',
 //);
-    // user == null ? Get.offNamed(Routes.Login) : 
+    // user == null ? Get.offNamed(Routes.Login) :
     // Get.offNamed(Routes.BASE);
     //
     user = _authServices.checkCurrentUser();
     if (user == null) {
       Get.offNamed(Routes.Login);
     } else {
-      try { 
+      try {
         //TODO: uncomment this line if you want to fetch user data from firestore
-        UserModel appUser = await _authServices.fetchUserData(user!.uid);
-        loginController.updateAppUserData(appUser);
+       // UserModel appUser = await _authServices.fetchUserData(user!.uid);
+         appUser = await _authServices.fetchUserData(user!.uid);
+        loginController.updateAppUserData(appUser!);
         Get.offNamed(Routes.BASE);
       } catch (e) {
         CustomSnackBar.showCustomErrorSnackBar(
@@ -63,24 +64,24 @@ class SplashController extends GetxController {
     // getParameters();
   }
 
-  Future getParameters() async {
-    var categoryData =
-        await _fireStorDB.getListDocuments(Constants.categoryCollection, null);
-    var unitData =
-        await _fireStorDB.getListDocuments(Constants.unitsCollection, null);
-    var typeData =
-        await _fireStorDB.getListDocuments(Constants.typesCollection, null);
-    for (var element in categoryData) {
-      categoriesList.add(CategoryModel.fromMap(element));
-    }
-    for (var element in unitData) {
-      unitsList.add(UnitModel.fromMap(element));
-    }
-    for (var element in typeData) {
-      typesList.add(TypeModel.fromMap(element));
-    }
-    // print(typesList.length);
-    // print(categoriesList.length);
-    // print(unitsList.length);
-  }
+  // Future getParameters() async {
+  //   var categoryData =
+  //       await _fireStorDB.getListDocuments(Constants.categoryCollection, null);
+  //   var unitData =
+  //       await _fireStorDB.getListDocuments(Constants.unitsCollection, null);
+  //   var typeData =
+  //       await _fireStorDB.getListDocuments(Constants.typesCollection, null);
+  //   for (var element in categoryData) {
+  //     categoriesList.add(CategoryModel.fromMap(element));
+  //   }
+  //   for (var element in unitData) {
+  //     unitsList.add(UnitModel.fromMap(element));
+  //   }
+  //   for (var element in typeData) {
+  //     typesList.add(TypeModel.fromMap(element));
+  //   }
+  //   // print(typesList.length);
+  //   // print(categoriesList.length);
+  //   // print(unitsList.length);
+  // }
 }

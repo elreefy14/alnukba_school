@@ -12,6 +12,20 @@ class MyFonts
     decoration: TextDecoration.underline,
     height: 0.17,
   );
+  //TextStyle(
+          //   color: Colors.white,
+          //   fontSize: 20,
+          //   fontFamily: 'Montserrat-Arabic',
+          //   fontWeight: FontWeight.w400,
+          //   //height: 0.06,
+          // ),
+          static const TextStyle appBarTextStyle = TextStyle(
+           // color: Colors.white,
+            fontSize: 20,
+            fontFamily: 'Montserrat-Arabic',
+            fontWeight: FontWeight.w400,
+            //height: 0.06,
+          );
   // return the right font depending on app language
   static TextStyle get getAppFontType => const TextStyle(fontFamily: 'Poppins');
 
@@ -25,7 +39,7 @@ class MyFonts
   static TextStyle get buttonTextStyle => getAppFontType;
 
   // app bar text font
-  static TextStyle get appBarTextStyle  => getAppFontType;
+  //static TextStyle get appBarTextStyle  => getAppFontType;
 
   // chips text font
   static TextStyle get chipTextStyle  => getAppFontType;
