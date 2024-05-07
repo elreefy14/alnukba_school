@@ -1073,6 +1073,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.1"
+  thunder_cli:
+    dependency: "direct main"
+    description:
+      name: thunder_cli
+      sha256: a9971196b19fbe862509530791f2ce6af1c6c4875a801f920d01860e85000522
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.7"
   ticket_widget:
     dependency: "direct main"
     description:

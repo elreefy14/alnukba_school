@@ -1,4 +1,7 @@
 import 'package:get/get.dart';
+import 'package:getx_skeleton/app/modules/VideoPlayer/videoplayer_binding.dart';
+import 'package:getx_skeleton/app/modules/VideoPlayer/videoplayer_view.dart';
+import 'package:getx_skeleton/app/modules/video_list/views/video_player_screen.dart';
 import 'package:getx_skeleton/app/modules/commandeView/commandeview_binding.dart';
 import 'package:getx_skeleton/app/modules/commandeView/commandeview_view.dart';
 import 'package:getx_skeleton/app/modules/commande_details/commande_details_view.dart';
@@ -7,8 +10,8 @@ import 'package:getx_skeleton/app/modules/login/login_view.dart';
 
 import '../modules/base/bindings/base_binding.dart';
 import '../modules/base/views/base_view.dart';
-import '../modules/cart/bindings/cart_binding.dart';
-import '../modules/cart/views/video_list_screen.dart';
+import '../modules/video_list/bindings/video_list_binding.dart';
+import '../modules/video_list/views/video_list_screen.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/notifications/bindings/notifications_binding.dart';
@@ -55,10 +58,19 @@ class AppPages {
       binding: CommandeViewBinding(),
     ),
     GetPage(
-      name: Routes.CART,
+      name: Routes.video,
       page: () => VideoListScreen(),
-      binding: CartBinding(),
+      binding: VideoListBinding(),
+     // transition: Transition.rightToLeft,
+     // transitionDuration: const Duration(milliseconds: 250),
     ),
+    //  //video player
+     GetPage(
+      name: Routes.VIDEO_PLAYER,
+      page: () => VideoPlayerScreen(),
+      binding: VideoPlayerBinding(),
+    ),
+
     GetPage(
       name: Routes.NOTIFICATIONS,
       page: () => NotificationsScreen(),
@@ -74,12 +86,12 @@ class AppPages {
       page: () => CommandeDetailsView(),
       binding: CommandeViewBinding(),
     ),
-    GetPage(
-      name: Routes.PRODUCT_DETAILS,
-      page: () => ProductDetailsView(),
-      binding: ProductDetailsBinding(),
-      transition: Transition.rightToLeft,
-      transitionDuration: const Duration(milliseconds: 250),
-    ),
+    // GetPage(
+    //   name: Routes.PRODUCT_DETAILS,
+    //   page: () => ProductDetailsView(),
+    //   binding: ProductDetailsBinding(),
+    //   transition: Transition.rightToLeft,
+    //   transitionDuration: const Duration(milliseconds: 250),
+    // ),
   ];
 }

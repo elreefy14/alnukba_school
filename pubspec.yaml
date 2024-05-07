@@ -47,6 +47,7 @@ dependencies:
   youtube_explode_dart: ^1.11.0
   youtube_player_iframe: ^4.0.4
   youtube_player_flutter: ^9.0.1
+  thunder_cli: ^2.2.7
 
 dev_dependencies:
   mockito:

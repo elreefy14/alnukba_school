@@ -85,4 +85,6 @@ const Map<String, String> enUs = {
   // static const String mainScreenTitle = 'الصفحة الرئيسية';
 
   Strings.mainScreenTitle: 'Main Screen',
+  //  static const String lessonsMenu = 'Lessons Menu';
+  Strings.lessonsMenu: 'Lessons Menu',
 };

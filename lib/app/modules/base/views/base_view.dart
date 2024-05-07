@@ -5,7 +5,7 @@ import 'package:getx_skeleton/app/modules/commandeView/commandeview_view.dart';
 
 import 'package:icons_plus/icons_plus.dart';
 import '../controllers/base_controller.dart';
-import '../../cart/views/video_list_screen.dart';
+import '../../video_list/views/video_list_screen.dart';
 import '../../home/views/home_view.dart';
 import '../../notifications/views/notifications_view.dart';
 import '../../settings/views/settings_view.dart';

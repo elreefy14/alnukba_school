@@ -143,5 +143,7 @@ class Strings {
   static const String myPassword = 'كلمة المرور';
   //Strings.myAlreadyHaveAnAccount.tr,
   static const String myAlreadyHaveAnAccount = 'هل لديك حساب بالفعل؟';
+
+  static const String lessonsMenu = 'Lessons Menu';
   //Strings.myDontHaveAnAccount.tr,
 }

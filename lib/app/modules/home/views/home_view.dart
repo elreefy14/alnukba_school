@@ -9,6 +9,7 @@ import 'package:getx_skeleton/app/data/models/notification_model.dart';
 import 'package:getx_skeleton/app/data/models/user_model.dart';
 import 'package:getx_skeleton/app/modules/home/views/widgets/custom_container_for_home_screen.dart';
 import 'package:getx_skeleton/app/modules/splash/controllers/splash_controller.dart';
+import 'package:getx_skeleton/app/routes/app_pages.dart';
 import 'package:getx_skeleton/config/translations/strings_enum.dart';
 import 'package:getx_skeleton/utils/image_constant.dart';
 import 'package:intl/intl.dart';
@@ -385,29 +386,34 @@ class HomeView extends GetView<HomeController> {
                     shrinkWrap: true,
                     crossAxisCount: 3,
                     children: <Widget>[
-                      CustomContainer(
-                          svgPath: ImageConstant.studentBehavior,
-                          title: 'سلوك الطالب'),
-                      CustomContainer(
-                          svgPath: ImageConstant.onlineLessons,
-                          title: 'دروس اونلاين'),
-                      CustomContainer(
-                          svgPath: ImageConstant.dailyHomework,
-                          title: 'الواجبات اليومية'),
-                      CustomContainer(
-                          svgPath: ImageConstant.examSchedule,
-                          title: 'جدول الامتحانات'),
-                      CustomContainer(
-                          svgPath: ImageConstant.lessonSchedule,
-                          title: 'جدول الدروس'),
-                      CustomContainer(
-                          svgPath: ImageConstant.attendance,
-                          title: 'الحضور والغياب'),
-                      CustomContainer(
-                          svgPath: ImageConstant.grades, title: 'الدرجات'),
-                      CustomContainer(
-                          svgPath: ImageConstant.annualFees,
-                          title: 'الاقساط السنوية'),
+                          CustomContainer(
+                        svgPath: ImageConstant.onlineLessons,
+                        title: 'دروس اونلاين',
+                        onTap: () {
+                          Get.toNamed(Routes.video);
+                        },
+                      ),
+                      // CustomContainer(
+                      //     svgPath: ImageConstant.studentBehavior,
+                      //     title: 'سلوك الطالب',
+                      //     ),
+                      // CustomContainer(
+                      //     svgPath: ImageConstant.dailyHomework,
+                      //     title: 'الواجبات اليومية'),
+                      // CustomContainer(
+                      //     svgPath: ImageConstant.examSchedule,
+                      //     title: 'جدول الامتحانات'),
+                      // CustomContainer(
+                      //     svgPath: ImageConstant.lessonSchedule,
+                      //     title: 'جدول الدروس'),
+                      // CustomContainer(
+                      //     svgPath: ImageConstant.attendance,
+                      //     title: 'الحضور والغياب'),
+                      // CustomContainer(
+                      //     svgPath: ImageConstant.grades, title: 'الدرجات'),
+                      // CustomContainer(
+                      //     svgPath: ImageConstant.annualFees,
+                      //     title: 'الاقساط السنوية'),
                     ],
                   ),
                 ),

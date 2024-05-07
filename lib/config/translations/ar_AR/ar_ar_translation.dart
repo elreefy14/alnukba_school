@@ -77,4 +77,6 @@ const Map<String, String> arAR = {
   Strings.admin: 'المدير',
   // static const String mainScreenTitle = 'الصفحة الرئيسية';
   Strings.mainScreenTitle: 'الصفحة الرئيسية',
+  //lessonmenu
+  Strings.lessonsMenu: 'قائمة الدروس',
 };

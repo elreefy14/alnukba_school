@@ -7,7 +7,9 @@ abstract class Routes {
   static const BASE = '/BASE';
   static const HOME = '/HOME';
   static const Commandes = '/COMMANDES';
-  static const CART = '/CART';
+  static const video = '/video';
+  //video player
+  static const VIDEO_PLAYER = '/VIDEO_PLAYER';
   static const NOTIFICATIONS = '/NOTIFICATIONS';
   static const SETTINGS = '/SETTINGS';
   static const CommandeDetails = '/CommandeDetails';
